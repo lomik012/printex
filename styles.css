@@ -1,6 +1,6 @@
 /* Nastavení základního stylu pro stránku */ 
 body {
-  background-color: #EAE0D5;
+  background-color: black;
   color: #5E503F;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -615,7 +615,14 @@ body, html {
         padding: 1rem;
     }
     .hamburger {
-        display: block; /* Zobrazit hamburger ikonu na mobilech */
+      margin: 0 4rem; /* Okraje pro hamburger menu */
+      text-align: right;
+      display: block;
+    }
+    header .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      position: absolute;
     }
   
     nav {
