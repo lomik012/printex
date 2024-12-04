@@ -1,6 +1,6 @@
 /* Nastavení základního stylu pro stránku */ 
 body {
-  background-color: black;
+  background: linear-gradient(to left, #EAE0D5, #C6AC8E);
   color: #5E503F;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,7 +18,8 @@ html {
 header {
   background-color: #0A0908;
   color: #EAE0D5;
-  padding: 1.5rem;
+  padding: 2.5rem;
+  bottom: 80%;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -34,7 +35,7 @@ header {
 header .logo {
   font-size: 2rem;
   font-weight: bold;
-  position: absolute;
+  position: relative;
 }
 
 
@@ -615,9 +616,12 @@ body, html {
         padding: 1rem;
     }
     .hamburger {
-      margin: 0 4rem; /* Okraje pro hamburger menu */
+      margin: 0 10rem; /* Okraje pro hamburger menu */
       text-align: right;
-      display: block;
+      display: inline;
+      margin-right: auto;
+      text-align: right;
+      
     }
     header .logo {
       font-size: 2rem;
