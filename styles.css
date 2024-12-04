@@ -34,6 +34,7 @@ header {
 header .logo {
   font-size: 2rem;
   font-weight: bold;
+  position: absolute;
 }
 
 
@@ -68,7 +69,8 @@ nav a:hover {
   cursor: pointer;
   font-size: 2rem; /* velikost fontu */
   color: #EAE0D5; /* nastaveni barvy */
-  margin: 0 1rem; /* Okraje pro hamburger menu */
+  margin: 0 4rem; /* Okraje pro hamburger menu */
+  text-align: right;
 }
 nav {
   display: block; /* Show nav by default */
@@ -521,16 +523,17 @@ body, html {
 
 
   /*showcase v index.html*/
-  #gallery {
+  /*#gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem;
 
-  }
+  }*/
 
   .gallery-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 2rem 0;
     opacity: 0; /* Vychází z toho, že je skrytý při načtení */
@@ -549,20 +552,28 @@ body, html {
     flex-direction: row; /* Obrázky se posunou vpravo */
   }
 
-  .gallery-item img {
+  /*.gallery-item img {
     max-width: 20rem;
     margin: 0 2rem;
-    border-radius: 0.4rem; /* Zaoblení rohů obrázku */
+    border-radius: 0.4rem; /* Zaoblení rohů obrázku */ 
 
-    
-  }
+   /* Styl pro obrázky */
+.gallery-item img {
+  width: 20rem; /* Obrázky vyplní dostupný prostor rodiče */
+  max-width: 50rem; /* Obrázky nebudou širší než 90 % šířky rodiče */
+  height: auto; /* Automatické zachování proporcí */
+  margin-bottom: 0.5rem; /* Mezera mezi obrázkem a textem */
+  border-radius: 0.8rem; /* Zaoblené rohy */
+  margin: 0 2rem;
+} 
 
   .gallery-text { 
     max-width: 60rem;
     padding: 1rem;
-    text-align: left; /* Text je zarovnán vlevo */
+    text-align: center; /* Text je zarovnán vlevo */
     font-size: 1.2rem; /* Velikost písma */
     color: #0A0908; /* Barva textu */
+    margin: 0 1rem;
   }
 
   /* Animace pro fade-in a fade-out */
@@ -652,11 +663,12 @@ body, html {
     /*uprava gallery itemu pro mobil*/
     .gallery-item {
       display: block;
-      align-items: center;
+      align-self: auto;
     }
     .gallery-text{
       align-items: center;
-      font-size: .1rem;
+      font-size: 1rem;
+      margin: 1rem;
     }
   
     #gallery-section {
@@ -675,7 +687,7 @@ body, html {
     .gallery-grid img {
       max-width: 100%; /* Maximální šířka obrázku na 100% */
       height: auto; /* Automatická výška pro udržení poměru stran */
-      border-radius: 0.8rem; /* Zaoblení rohů obrázku */
+      border-radius: 1.8rem; /* Zaoblení rohů obrázku */
       border: 0.2rem solid transparent; /* Výchozí rámeček, transparentní */
       display: block; /* Odstranění mezery pod obrázkem */
     }
