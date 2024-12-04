@@ -1,0 +1,683 @@
+/* Nastavení základního stylu pro stránku */ 
+body {
+  background-color: #EAE0D5;
+  color: #5E503F;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+  padding-top: 6rem;
+}
+
+html {
+  scroll-behavior: smooth; /* Plynulé scrollování */
+}
+
+
+/* Záhlaví */
+header {
+  background-color: #0A0908;
+  color: #EAE0D5;
+  padding: 1.5rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Přidání z-index pro zajištění, že je menu nad ostatními prvky */
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+
+/* Navigační menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  margin-top: 1rem; /* Přidej mezeru nad menu */
+
+}
+
+nav a {
+  color: #EAE0D5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #C6AC8E;
+}
+
+
+/*hamburger menicko*/
+.hamburger {
+  display: none; /* skryty pri zakladnim zobrazeni */
+  cursor: pointer;
+  font-size: 2rem; /* velikost fontu */
+  color: #EAE0D5; /* nastaveni barvy */
+  margin: 0 1rem; /* Okraje pro hamburger menu */
+}
+nav {
+  display: block; /* Show nav by default */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline; /* Change to block for vertical layout */
+}
+
+
+
+
+
+
+/* Hlavní obsah */
+main {
+  padding: 2rem;
+  background: linear-gradient(to left, #EAE0D5, #C6AC8E);
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  color: #0A0908;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
+
+
+/* Styl pro tlačítka a odkazy */
+button, .button-link {
+  background-color: #C6AC8E;
+  color: #0A0908;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, .button-link:hover {
+  background-color: #5E503F;
+  color: #EAE0D5;
+  transform: translateY(-0.2rem);
+}
+
+/* Stylování pro tabulky */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: #EAE0D5;
+  color: #0A0908;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 1rem;
+  border: 0.1rem solid #5E503F;
+  text-align: left;
+}
+
+th {
+  background-color: #C6AC8E;
+  color: #0A0908;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+/* Stylování pro kontaktní formulář */
+form {
+  background-color: #EAE0D5; /* Světlé pozadí formuláře */
+  padding: 2.5rem;
+  border-radius: 0.8rem; /* Zaoblení rohů */
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2); /* Mírný stín */
+  max-width: 60rem; /* Maximální šířka formuláře */
+  margin: 2rem auto; /* Vycentrování formuláře */
+}
+
+/* Styl pro vstupní pole */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Šířka na 100% */
+  padding: .5rem;
+  border: 0.1rem solid #C6AC8E; /* Rámeček */
+  border-radius: 0.4rem; /* Zaoblení rohů */
+  margin-bottom: 1rem; /* Mezery mezi prvky */
+  transition: border-color 0.3s; /* Plynulá změna barvy rámečku */
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #5E503F; /* Změna barvy rámečku při zaostření */
+  outline: none; /* Odstranění standardního orámování */
+}
+
+/* Styl pro chybové hlášky */
+.error-message {
+  color: red; /* Červená barva pro chybové zprávy */
+  font-size: 0.9rem; /* Velikost písma */
+  margin-bottom: 1rem; /* Mezery pod zprávou */
+}
+
+/* Animace pro fade-in a fade-out */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(2rem);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+}
+
+/* Zápatí */
+footer {
+  background-color: #0A0908;
+  color: #EAE0D5;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  box-shadow: 0 -0.4rem 0.6rem rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+footer a {
+  color: #C6AC8E;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #5E503F;
+}
+
+
+/*dodavatele footer*/
+.supplier-logos {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.supplier-logo {
+  width: 10rem; /* nebo jiná šířka, kterou preferujete */
+  margin: 0 1.5rem; /* mezera mezi logy */
+}
+
+.supplier-logo {
+  width: 5rem; /* nebo jiná velikost podle potřeby */
+  height: auto; /* aby se zachoval poměr stran */
+  margin: 1rem; /* mezera kolem loga */
+  fill: #EAE0D5; /* barva vyplnění (pokud chcete změnit barvu) */
+}
+
+
+
+
+
+/* Styl pro galerii v sekci s ID gallery-section */
+#gallery-section {
+  padding: 2rem; /* Padding kolem sekce */
+}
+
+/* Styly pro obrázky v galerii */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Nastavení flexibilního sloupce */
+  gap: 1rem; /* Mezery mezi obrázky */
+  margin: 0; /* Odstranění marginu kolem galerie */
+}
+
+/* Styl pro obrázky */
+.gallery-grid img {
+  max-width: 100%; /* Maximální šířka obrázku na 100% */
+  height: auto; /* Automatická výška pro udržení poměru stran */
+  border-radius: 0.8rem; /* Zaoblení rohů obrázku */
+  border: 0.2rem solid transparent; /* Výchozí rámeček, transparentní */
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Plynulé přechody */
+  display: block; /* Odstranění mezery pod obrázkem */
+}
+
+/* Efekt hover pro obrázky */
+.gallery-grid img:hover {
+  transform: scale(1.05); /* Zvětšení obrázku */
+  border-color: #C6AC8E; /* Barva rámečku při hoveru */
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3); /* Stín kolem obrázku */
+}
+
+/* Styly pro sekci cenik */
+#pricing {
+  padding: 2rem;
+  background: linear-gradient(to right, #EAE0D5, #C6AC8E);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#pricing h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  color: #000000;
+}
+
+#pricing table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+#pricing th, #pricing td {
+  padding: 1.2rem;
+  text-align: left;
+  border: 0.1rem solid #e0e0e0;
+}
+
+#pricing th {
+  background-color: #000000;
+  color: white;
+}
+
+#pricing tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+#intro {
+  text-align: center;
+}
+#services{
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+#contact{
+  text-align: center;
+}
+
+#services {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#services-items {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.service-item {
+  position: relative;
+  z-index: 1;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 calc(33.33% - 1rem);
+}
+
+.service-icon {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+
+#cta .button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background-color: #000000;
+  text-decoration: none;
+  border-radius: .5rem;
+  transition: background-color 0.5s ease;
+  text-align: center;
+  margin: 2rem auto;
+  display: block;
+  width: fit-content;
+  z-index: 2;
+  position: relative;
+}
+
+#cta .button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Styl pro ikonu SVG */
+.service-item svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #000000;
+  margin-bottom: .35rem;
+  transition: fill 0.5s ease;
+}
+
+.service-item svg:hover {
+  fill: #C6AC8E; /* Barva ikony při hoveru */
+}
+
+/* Nadpis služby */
+.service-item h2 {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  color: #000000;
+}
+
+/* Popis služby */
+.service-item p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+
+body, html { 
+  width: 100%;
+  height: 100%;
+}
+
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.bubble {
+  position: absolute;
+  bottom: -10rem;
+  width: 4rem;
+  height: 4rem;
+  background: #C6AC8E;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite ease-in;
+}
+.bubble:nth-child(1) {
+  width: 4rem;
+  height: 4rem;
+  left: 10%;
+  animation-duration: 8s;
+}
+.bubble:nth-child(2) {
+  width: 2rem;
+  height: 2rem;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+.bubble:nth-child(3) {
+  width: 5rem;
+  height: 5rem;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(4) {
+  width: 8rem;
+  height: 8rem;
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 0s;
+}
+.bubble:nth-child(5) {
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 55%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+.bubble:nth-child(6) {
+  width: 4.5rem;
+  height: 4.5rem;
+  left: 65%;
+  animation-duration: 8s;
+  animation-delay: 3s;
+}
+.bubble:nth-child(7) {
+  width: 9rem;
+  height: 9rem;
+  left: 70%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(8) {
+  width: 2.5rem;
+  height: 2.5rem;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(9) {
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+.bubble:nth-child(10) {
+  width: 9rem;
+  height: 9rem;
+  left: 25%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+@keyframes rise {
+  0% {
+    bottom: 20rem; /* Začíná pod obrazovkou */
+    opacity: 0; /* Na začátku jsou neviditelné */
+  }
+  50% {
+    opacity: 1; /* Uprostřed animace jsou viditelné */
+  }
+  100% {
+    bottom: 100%; /* Končí nad obrazovkou */
+    opacity: 0; /* Na konci jsou opět neviditelné */
+  }
+}
+
+
+  /*showcase v index.html*/
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+
+  }
+
+  .gallery-item {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    opacity: 0; /* Vychází z toho, že je skrytý při načtení */
+    transition: opacity 0.5s ease-in-out;
+    margin: 2rem 0; /* Zvýšení mezery mezi obrázky (vertikální) */
+
+
+  }
+
+  .gallery-item.left {
+    flex-direction: row-reverse; /* Obrázky se posunou vlevo */
+
+  }
+
+  .gallery-item.right {
+    flex-direction: row; /* Obrázky se posunou vpravo */
+  }
+
+  .gallery-item img {
+    max-width: 20rem;
+    margin: 0 2rem;
+    border-radius: 0.4rem; /* Zaoblení rohů obrázku */
+
+    
+  }
+
+  .gallery-text { 
+    max-width: 60rem;
+    padding: 1rem;
+    text-align: left; /* Text je zarovnán vlevo */
+    font-size: 1.2rem; /* Velikost písma */
+    color: #0A0908; /* Barva textu */
+  }
+
+  /* Animace pro fade-in a fade-out */
+  .fade-in {
+    opacity: 1;
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+
+  
+/*breakpointy*/
+
+/*BREAKPOINTS*/
+/* Styl pro mobilní zařízení */
+@media (max-width: 768px) {
+
+  /* Prohlížeče založené na WebKit (např. Chrome, Safari) */
+    ::-webkit-scrollbar {
+        width: 8px; /* Šířka scrollovací lišty */
+    }
+  
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Barva pozadí scrollovací lišty */
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: #888; /* Barva samotného scrollu */
+        border-radius: 10px; /* Zaoblení scrollovací lišty */
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Barva scrollu při hoveru */
+    }
+  /* Prohlížeče založené na WebKit (např. Chrome, Safari) */
+  /*hlavni stranka a jeji uprava na mobil*/
+    main{
+        padding: 1rem;
+    }
+    .hamburger {
+        display: block; /* Zobrazit hamburger ikonu na mobilech */
+    }
+  
+    nav {
+        position: absolute; /* Aby nav menu bylo nad obsahem */
+        top: 100%; /* Umístí menu pod hlavičku */
+        left: 0; /* Zajišťuje, že menu začíná na levém okraji */
+        width: 100%; /* Zajištění, že navigace zabírá celou šířku */
+        background-color: #000000; /* Barva pozadí navigace */
+        overflow: hidden; /* Skrytí obsahu, když je menu zavřené */
+        max-height: 0; /* Skrytí navigace ve výchozím stavu */
+        transition: max-height 0.5s ease; /* Efekt přechodu */
+    }
+  
+    nav.active {
+        max-height: 30rem; /* Maximální výška pro rozbalené menu */
+    }
+  
+    
+  
+    nav ul {
+        display: flex; /* Zobrazí navigaci jako flexbox */
+        flex-direction: column; /* Sloupec pro navigaci */
+        width: 100%; /* Zajištění, že navigace zabírá celou šířku */
+        padding: 0; /* Bez vnitřních okrajů */
+        margin: 0; /* Bez vnějších okrajů */
+    }
+  
+    nav ul li {
+        padding: .2rem; /* Vzdálenost mezi odkazy */
+        text-align: center;
+    }
+  
+    nav ul li a {
+        color: #EAE0D5; /* Barva textu odkazů */
+        text-decoration: none; /* Odstranit podtržení */
+        display: block; /* Zajistit, že odkazy vyplní celou šířku */
+        padding: .15rem 0;
+  
+    }
+  
+    nav ul li a:hover {
+        background-color: #575757; /* Barva pozadí při hoveru */
+    }
+  
+    /*uprava gallery itemu pro mobil*/
+    .gallery-item {
+      display: block;
+      align-items: center;
+    }
+    .gallery-text{
+      align-items: center;
+      font-size: .1rem;
+    }
+  
+    #gallery-section {
+      padding: .2rem; /* Padding kolem sekce */
+    }
+    
+    /* Styly pro obrázky v galerii */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr)); /* Nastavení flexibilního sloupce */
+      gap: .1rem; /* Mezery mezi obrázky */
+      margin: 0; /* Odstranění marginu kolem galerie */
+    }
+    
+    /* Styl pro obrázky */
+    .gallery-grid img {
+      max-width: 100%; /* Maximální šířka obrázku na 100% */
+      height: auto; /* Automatická výška pro udržení poměru stran */
+      border-radius: 0.8rem; /* Zaoblení rohů obrázku */
+      border: 0.2rem solid transparent; /* Výchozí rámeček, transparentní */
+      display: block; /* Odstranění mezery pod obrázkem */
+    }
+  
+  }
