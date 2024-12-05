@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease;
-  padding-top: 6rem;
 }
 
 html {
@@ -18,8 +17,8 @@ html {
 header {
   background-color: #0A0908;
   color: #EAE0D5;
-  padding: 2.5rem;
-  bottom: 80%;
+  padding: 1.5rem;
+  bottom: auto;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -102,6 +101,7 @@ h1 {
   color: #0A0908;
   font-size: 2.5rem;
   text-align: center;
+  padding-top: 6rem;
 }
 
 
@@ -297,7 +297,6 @@ footer a:hover {
   text-align: center;
   margin-bottom: 2rem;
   font-family: 'Arial', sans-serif;
-  font-size: 2em;
   color: #000000;
 }
 
@@ -345,9 +344,9 @@ footer a:hover {
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
+  gap: 3rem;
   padding: 0 1rem;
-}
+} 
 
 .service-item {
   position: relative;
@@ -560,7 +559,7 @@ body, html {
 
    /* Styl pro obrázky */
 .gallery-item img {
-  width: 20rem; /* Obrázky vyplní dostupný prostor rodiče */
+  width: 18rem; /* Obrázky vyplní dostupný prostor rodiče */
   max-width: 50rem; /* Obrázky nebudou širší než 90 % šířky rodiče */
   height: auto; /* Automatické zachování proporcí */
   margin-bottom: 0.5rem; /* Mezera mezi obrázkem a textem */
@@ -569,7 +568,7 @@ body, html {
 } 
 
   .gallery-text { 
-    max-width: 60rem;
+    max-width: 50rem;
     padding: 1rem;
     text-align: center; /* Text je zarovnán vlevo */
     font-size: 1.2rem; /* Velikost písma */
@@ -614,19 +613,29 @@ body, html {
   /*hlavni stranka a jeji uprava na mobil*/
     main{
         padding: 1rem;
+        margin-top: 4rem;
     }
+
+    h1{
+      padding-top: 1.5rem;
+    }
+
     .hamburger {
-      margin: 0 10rem; /* Okraje pro hamburger menu */
-      text-align: right;
+      margin: 0 15rem; /* Okraje pro hamburger menu */
       display: inline;
       margin-right: auto;
       text-align: right;
       
     }
+    
+    
     header .logo {
       font-size: 2rem;
       font-weight: bold;
       position: absolute;
+    }
+    header {
+      height: 2.5rem;
     }
   
     nav {
@@ -657,6 +666,7 @@ body, html {
     nav ul li {
         padding: .2rem; /* Vzdálenost mezi odkazy */
         text-align: center;
+        padding-left: 15rem;
     }
   
     nav ul li a {
@@ -689,8 +699,8 @@ body, html {
     /* Styly pro obrázky v galerii */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr)); /* Nastavení flexibilního sloupce */
-      gap: .1rem; /* Mezery mezi obrázky */
+      grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); /* Nastavení flexibilního sloupce */
+      gap: 1rem; /* Mezery mezi obrázky */
       margin: 0; /* Odstranění marginu kolem galerie */
     }
     
