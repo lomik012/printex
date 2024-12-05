@@ -15,9 +15,10 @@ html {
 
 /* Záhlaví */
 header {
-  background-color: #0A0908;
+  background-color: black;
   color: #EAE0D5;
-  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   bottom: auto;
   text-align: center;
   position: fixed;
@@ -26,8 +27,8 @@ header {
   box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
   z-index: 1000; /* Přidání z-index pro zajištění, že je menu nad ostatními prvky */
+  display: grid;
   align-items: center;
-  justify-content: space-between;
 
 }
 
@@ -98,12 +99,28 @@ main {
 }
 
 h1 {
-  color: #0A0908;
+  color: black;
   font-size: 2.5rem;
   text-align: center;
   padding-top: 6rem;
+  z-index: 2;
+  position: relative;
 }
 
+h2 {
+  color: black;
+  font-size: 1.2rem;
+  text-align: left;
+  padding-top: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+h3{
+  color: #000000;
+  text-align: center;
+  font-size: 1.5rem;
+}
 
 
 
@@ -157,7 +174,7 @@ form {
   padding: 2.5rem;
   border-radius: 0.8rem; /* Zaoblení rohů */
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2); /* Mírný stín */
-  max-width: 60rem; /* Maximální šířka formuláře */
+  width: auto; /* Maximální šířka formuláře */
   margin: 2rem auto; /* Vycentrování formuláře */
 }
 
@@ -266,6 +283,9 @@ footer a:hover {
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Nastavení flexibilního sloupce */
   gap: 1rem; /* Mezery mezi obrázky */
   margin: 0; /* Odstranění marginu kolem galerie */
+  position: relative;
+  z-index: 2;
+
 }
 
 /* Styl pro obrázky */
@@ -291,6 +311,8 @@ footer a:hover {
   background: linear-gradient(to right, #EAE0D5, #C6AC8E);
   border-radius: 0.8rem;
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 #pricing h1 {
@@ -324,6 +346,8 @@ footer a:hover {
 
 #intro {
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 #services{
   text-align: center;
@@ -331,8 +355,22 @@ footer a:hover {
   z-index: 2;
 }
 
-#contact{
+#contact{ /* stylovani kontakt tabulky v index.html*/
   text-align: center;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to right, #EAE0D5, #C6AC8E);
+  border-radius: .8rem;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+#kontakt{/* stylovani kontakt tabulky v kontakt.html*/
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  border-radius: .8rem;
+  padding: 2rem;
 }
 
 #services {
@@ -531,6 +569,11 @@ body, html {
 
   }*/
 
+  #gallery{
+    position: relative;
+    z-index: 2;
+  }
+
   .gallery-item {
     display: flex;
     flex-direction: column;
@@ -618,10 +661,22 @@ body, html {
 
     h1{
       padding-top: 1.5rem;
+      z-index: 2;
+      position: relative;
+      }
+    h2{
+      font-size: .9rem;
+      margin: 1rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    #kontakt{ /*kontakt.html*/
+      padding: 0rem;
     }
 
     .hamburger {
-      margin: 0 15rem; /* Okraje pro hamburger menu */
+      margin: 0 18.8rem; /* Okraje pro hamburger menu */
       display: inline;
       margin-right: auto;
       text-align: right;
@@ -633,6 +688,7 @@ body, html {
       font-size: 2rem;
       font-weight: bold;
       position: absolute;
+      padding-left: 1.5rem;
     }
     header {
       height: 2.5rem;
@@ -702,6 +758,8 @@ body, html {
       grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); /* Nastavení flexibilního sloupce */
       gap: 1rem; /* Mezery mezi obrázky */
       margin: 0; /* Odstranění marginu kolem galerie */
+      position: relative;
+      z-index: 2;
     }
     
     /* Styl pro obrázky */
