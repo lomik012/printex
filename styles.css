@@ -648,6 +648,7 @@ body, html {
       margin: 1rem;
       z-index: 2;
       position: relative;
+      padding: 0rem;
     }
 
     #kontakt{ /*kontakt.html*/
