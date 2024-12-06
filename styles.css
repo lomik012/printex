@@ -114,10 +114,17 @@ h2 {
   padding-top: 2rem;
   z-index: 2;
   position: relative;
+  padding: 2rem;
 }
 
 h3{
   color: #000000;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h4{
+  color: white;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -127,7 +134,7 @@ h3{
 /* Styl pro tlačítka a odkazy */
 button, .button-link {
   background-color: #C6AC8E;
-  color: #0A0908;
+  color: black;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.4rem;
@@ -154,7 +161,7 @@ table {
 
 th, td {
   padding: 1rem;
-  border: 0.1rem solid #5E503F;
+  border: .1rem solid #5E503F;
   text-align: left;
 }
 
@@ -165,7 +172,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 /* Stylování pro kontaktní formulář */
@@ -230,7 +237,7 @@ textarea:focus {
 
 /* Zápatí */
 footer {
-  background-color: #0A0908;
+  background-color: black;
   color: #EAE0D5;
   text-align: center;
   padding: 1.5rem;
@@ -253,24 +260,14 @@ footer a:hover {
 /*dodavatele footer*/
 .supplier-logos {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .supplier-logo {
-  width: 10rem; /* nebo jiná šířka, kterou preferujete */
-  margin: 0 1.5rem; /* mezera mezi logy */
-}
-
-.supplier-logo {
-  width: 5rem; /* nebo jiná velikost podle potřeby */
+  width: 3.5rem; /* nebo jiná velikost podle potřeby */
   height: auto; /* aby se zachoval poměr stran */
-  margin: 1rem; /* mezera kolem loga */
-  fill: #EAE0D5; /* barva vyplnění (pokud chcete změnit barvu) */
-}
-
-
-
-
+  margin: 0 1rem; /* mezera kolem loga */
+  }
 
 /* Styl pro galerii v sekci s ID gallery-section */
 #gallery-section {
@@ -429,9 +426,8 @@ footer a:hover {
 .service-item svg {
   width: 5rem;
   height: 5rem;
-  fill: #000000;
   margin-bottom: .35rem;
-  transition: fill 0.5s ease;
+  transition:  0.5s ease;
 }
 
 .service-item svg:hover {
@@ -635,24 +631,7 @@ body, html {
 /* Styl pro mobilní zařízení */
 @media (max-width: 768px) {
 
-  /* Prohlížeče založené na WebKit (např. Chrome, Safari) */
-    ::-webkit-scrollbar {
-        width: 8px; /* Šířka scrollovací lišty */
-    }
-  
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1; /* Barva pozadí scrollovací lišty */
-    }
-  
-    ::-webkit-scrollbar-thumb {
-        background: #888; /* Barva samotného scrollu */
-        border-radius: 10px; /* Zaoblení scrollovací lišty */
-    }
-  
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555; /* Barva scrollu při hoveru */
-    }
-  /* Prohlížeče založené na WebKit (např. Chrome, Safari) */
+
   /*hlavni stranka a jeji uprava na mobil*/
     main{
         padding: 1rem;
@@ -721,8 +700,8 @@ body, html {
   
     nav ul li {
         padding: .2rem; /* Vzdálenost mezi odkazy */
-        text-align: center;
-        padding-left: 15rem;
+        text-align: right;
+        padding-right: 3rem;
     }
   
     nav ul li a {
